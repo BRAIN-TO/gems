@@ -22,7 +22,8 @@ Optional arguments:
     --dte   : delta TE                  ( default: 3.75 ms )
     --out   : Output filename           ( default: bto_fieldmap_in_Radians )    
 --------------------------------------------------------------------------------
-Script was created by: Sriranga Kashyap (08-2022), kashyap.sriranga@gmail.com
+Script was created by   : Sriranga Kashyap (08-2022), kashyap.sriranga@gmail.com
+Learn more              : https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FUGUE/Guide
 --------------------------------------------------------------------------------
 Citable(s):
     1. Jezzard & Balaban (1995), https://doi.org/10.1002/mrm.1910340111
