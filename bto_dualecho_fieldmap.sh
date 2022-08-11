@@ -127,6 +127,7 @@ echo "  - Phase 2      : $phs2 "
 echo "  - Delta TE     : $dte ms "
 echo " "
 echo " ++ Running FSL steps "
+
 echo -ne " - Convert phase to radians ...\r "
 fslmaths \
     $phs1 \
@@ -142,16 +143,30 @@ fslmaths \
     ${phs2}_in_Radians \
     -odt float
 echo " - Convert phase to radians ... Done."
+
+echo -ne " - Creating brain mask ...\r "
+bet \
+    $mag1 \
+    ${mag1}_brain \
+    -m -R
+
+imrm \
+    ${mag1}_brain
+echo " - Creating brain mask ... Done."
+
 echo -ne " - Unwrapping phase images ...\r "
 prelude \
     -a $mag1 \
     -p ${phs1}_in_Radians \
+    -m ${mag1}_brain_mask \
     -o ${phs1}_in_Radians_Unwrapped
 prelude \
     -a $mag2 \
     -p ${phs2}_in_Radians \
+    -m ${mag1}_brain_mask \
     -o ${phs2}_in_Radians_Unwrapped
 echo " - Unwrapping phase images ... Done."
+
 echo -ne " - Calculating Fieldmap ...\r "
 fslmaths \
     ${phs2}_in_Radians_Unwrapped \
@@ -162,6 +177,7 @@ fslmaths \
     $out \
     -odt float
 echo " - Calculating Fieldmap ... Done."
+
 echo " "
 echo " ++ Output "
 echo "  - Fieldmap     : $out "
