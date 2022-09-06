@@ -11,7 +11,7 @@ function Help() {
 ${bold}$(basename $0) ${normal} 
 
 Usage:
-$(basename $0) ${bold}--epi${normal} EPI image ${bold}--fmap${normal} Fieldmap
+$(basename $0) ${bold}--epi${normal}=EPI image ${bold}--fmap${normal}=Fieldmap
 --------------------------------------------------------------------------------
 Required arguments:
     --epi   : EPI dataset to be unwarped    ( e.g. /path/to/source/epi.nii.gz )
@@ -73,7 +73,7 @@ get_imarg1() {
 
 # Defaults
 pedir=y
-out=${epi}_Unwarped
+out=bto_EPI_Unwarped
 
 # Parse input arguments
 while [ $# -ge 1 ]; do
