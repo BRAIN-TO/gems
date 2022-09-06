@@ -11,7 +11,7 @@ function Help() {
 ${bold}$(basename $0) ${normal} 
 
 Usage:
-$(basename $0) ${bold}--mag1${normal} Magnitude 1 ${bold}--mag2${normal} Magnitude 2 ${bold}--phs1${normal} Phase 1 ${bold}--phs2${normal} Phase 2 ${bold}--dte${normal} 3.75 ${bold}--out${normal} bto_fieldmap_in_Radians 
+$(basename $0) ${bold}--mag1${normal}=Magnitude 1 ${bold}--mag2${normal}=Magnitude 2 ${bold}--phs1${normal}=Phase 1 ${bold}--phs2${normal}=Phase 2 ${bold}--dte${normal}=3.75 ${bold}--out${normal}=bto_fieldmap_in_Radians 
 --------------------------------------------------------------------------------
 Required arguments:
     --mag1  : 1st echo magnitude image  ( e.g. /path/to/source/gre_mag_e1.nii.gz )
