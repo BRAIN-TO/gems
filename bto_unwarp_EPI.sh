@@ -11,7 +11,7 @@ function Help() {
 ${bold}$(basename $0) ${normal} 
 
 Usage:
-$(basename $0) ${bold}--epi${normal} EPI image ${bold}--fmap${normal} Fieldmap
+$(basename $0) ${bold}--epi${normal}=EPI image ${bold}--fmap${normal}=Fieldmap
 --------------------------------------------------------------------------------
 Required arguments:
     --epi   : EPI dataset to be unwarped    ( e.g. /path/to/source/epi.nii.gz )
@@ -19,7 +19,7 @@ Required arguments:
 Optional arguments:
     --dwell   : Effective echo-spacing      ( default: parse from .json file )
     --pedir   : PE direction x/y/z/x-/y-/z- ( default: y )    
-    --out     : Output filename             ( default: suffixed with "_Unwarped" )
+    --out     : Output filename             ( default: suffixed with "bto_EPI_Unwarped" )
     --fmapmag   : Fieldmap magnitude image  ( e.g. /path/to/source/fmap_mag.nii.gz )
     --register  : Register fieldmap to EPI  ( requires --fmapmag )
 --------------------------------------------------------------------------------
@@ -73,7 +73,7 @@ get_imarg1() {
 
 # Defaults
 pedir=y
-out=${epi}_Unwarped
+out=bto_EPI_Unwarped
 
 # Parse input arguments
 while [ $# -ge 1 ]; do
