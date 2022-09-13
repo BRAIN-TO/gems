@@ -23,7 +23,7 @@ Optional arguments:
     --fmapmag   : Fieldmap magnitude image  ( e.g. /path/to/source/fmap_mag.nii.gz )
     --register  : Register fieldmap to EPI  ( requires --fmapmag )
 --------------------------------------------------------------------------------
-Script was created by: Sriranga Kashyap (08-2022), kashyap.sriranga@gmail.com
+Script was created by: S Kashyap (08-2022), kashyap.sriranga@gmail.com
 --------------------------------------------------------------------------------
 Citable(s):
     1. Jezzard & Balaban (1995), https://doi.org/10.1002/mrm.1910340111
