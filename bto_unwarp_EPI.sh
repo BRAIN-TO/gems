@@ -153,11 +153,11 @@ if [ $register = "yes" ]; then
     echo " ++ Running FSL steps "
     echo -ne " - Registering Fieldmap to EPI ...\r "
     flirt \
-        --interp trilinear \
-        --dof 6 \
-        --ref $fmapmag \
-        --in $epi \
-        --omat ${epi}_reg2Fmap.MAT
+        -interp trilinear \
+        -dof 6 \
+        -ref $fmapmag \
+        -in $epi \
+        -omat ${epi}_reg2Fmap.MAT
     echo " - Registering Fieldmap to EPI ... Done. "
     echo -ne " - Calculating transformations ...\r "
     convert_xfm \
