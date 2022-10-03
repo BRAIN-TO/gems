@@ -80,11 +80,11 @@ while [ $# -ge 1 ]; do
     iarg=$(get_opt1 $1)
     case "$iarg" in
 
-    --epi) # Magnitude1
+    --epi) # Timeseries Image
         epi=$(get_imarg1 $1)
         shift
         ;;
-    --fmap) # Magnitude2
+    --fmap) # Fieldmap in Rads e.g., from bto_dualecho_fieldmap
         fmap=$(get_imarg1 $1)
         shift
         ;;
@@ -184,7 +184,7 @@ if [ $register = "yes" ]; then
         ${fmapmag}_brain_mask
 
     fugue \
-        --loadfmap=${fmaprads} \
+        --loadfmap=${fmap} \
         --mask=${fmapmag}_brain_mask \
         --unmaskfmap \
         --savefmap=${fmap}_unmasked \
