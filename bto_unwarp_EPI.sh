@@ -209,7 +209,7 @@ if [ $register = "yes" ]; then
     echo -ne " - Executing FUGUE ...\r "
     fugue \
         --in=$epi \
-        --loadfmap=${fmap}_reg2EPI.nii.gz \
+        --loadfmap=${fmap}_unmasked_reg2EPI.nii.gz \
         --unwarpdir=$pedir \
         --dwell=$dwell \
         --saveshift=${epi}_VDM.nii.gz \
