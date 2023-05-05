@@ -145,13 +145,10 @@ fslmaths \
 echo " - Convert phase to radians ... Done."
 
 echo -ne " - Creating brain mask ...\r "
-bet \
-    $mag1 \
-    ${mag1}_brain \
-    -m -R
+mri_synthstrip \
+    -i ${mag1}.nii.gz \
+    -m ${mag1}_brain_mask.nii.gz &>/dev/null
 
-imrm \
-    ${mag1}_brain
 echo " - Creating brain mask ... Done."
 
 echo -ne " - Unwrapping phase images ...\r "
