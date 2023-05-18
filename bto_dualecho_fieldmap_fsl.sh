@@ -99,7 +99,7 @@ while [ $# -ge 1 ]; do
         dte=$(get_arg1 $1)
         shift
         ;;
-    --out) # Phase2
+    --out) # output
         out=$(get_imarg1 $1)
         shift
         ;;
